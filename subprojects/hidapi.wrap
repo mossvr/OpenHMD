@@ -1,0 +1,10 @@
+[wrap-file]
+directory = hidapi-747309e7bea847e874ac6e81ab652872b095dd3c
+
+source_url = https://github.com/OpenHMD/hidapi/archive/747309e7bea847e874ac6e81ab652872b095dd3c.zip
+source_filename = hidapi-747309e7bea847e874ac6e81ab652872b095dd3c.zip
+source_hash = 327bca5faeec80d0dc570282328de4e5d965fc75cd5958d6e44d25e75e85dcb4
+
+patch_url = https://localhost
+patch_filename = hidapi-meson.tar.gz
+patch_hash = 2d8dcab27b0fe3ca6bc26f571607f00cedd6a764b3c86eaa13e0d6722612fdee

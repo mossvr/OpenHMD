@@ -20,7 +20,11 @@ hidapi = 'hidapi'
 if host_machine.system() == 'linux'
 	hidapi = 'hidapi-libusb'
 endif
-dep_hidapi = dependency(hidapi)
+dep_hidapi = dependency(hidapi, required : false)
+if not dep_hidapi.found()
+  proj_hidapi = subproject('hidapi')
+  dep_hidapi = proj_hidapi.get_variable('hidapi_dep')
+endif
 deps = [
 	meson.get_compiler('c').find_library('m', required : false), #-lm
 	dependency('threads') #pthread
